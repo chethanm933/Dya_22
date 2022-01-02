@@ -11,9 +11,12 @@ public class Main {
 		
 		Scanner sc = new Scanner(System.in);
 		PhoneBook phonebook = new PhoneBook();
-		Contacts contact = new Contacts();
 		Main main = new Main();
 		
+		String add = "y";
+		
+		do {
+		Contacts contact = new Contacts();
 		phonebook.getName();
 		phonebook.getLastName();
 		phonebook.getPhone();
@@ -24,6 +27,9 @@ public class Main {
 		phonebook.getEmail();
 		
 		phoneBook.add(contact);
+		System.out.println("Do you want to add New Contact :y/n");
+		add = sc.next();
 		
+		} while(add.equalsIgnoreCase("y"));
 	}
 }

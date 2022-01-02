@@ -130,12 +130,7 @@ public class PhoneBook {
 			stateMatcher = compileState.matcher(state);
 		}
 		contact.setState(state);
-	} 
-	
-	public Contacts viewAllContacts() {
-		return phonebook.contact;
 	}
-	
 	
 }
 	
