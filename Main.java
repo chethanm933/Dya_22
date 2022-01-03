@@ -44,6 +44,10 @@ public class Main {
 				main.editContact();
 				break;
 				
+			case 3:
+				main.removeContact();
+				break;
+				
 			case 4:
 				main.viewAllContact();
 				break;
@@ -74,7 +78,20 @@ public class Main {
 			for (Contacts view : phoneBook) {
 				System.out.println(view);
 			}
-			
 		}
+	}
+		
+		
+	public void removeContact() {
+		System.out.println("Please enter a name which you want to remove :");
+		String removeName = sc.next();
+		for(Contacts remove: phoneBook) {
+		if(remove.getName() == removeName) {
+			phoneBook.remove(removeName);
+			System.out.println("The Contact has successfully deleted :");
+		} else {
+			System.out.println("No Contact found with this Name :");
+			}
+				}
 	}
 }
