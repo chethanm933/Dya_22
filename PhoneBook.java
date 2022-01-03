@@ -9,7 +9,7 @@ public class PhoneBook {
 	static Scanner sc = new Scanner(System.in);
 	
 	Contacts contact = new Contacts(); 
-	PhoneBook phonebook = new PhoneBook();
+	
 	
 	public void getName() {
 		System.out.println("Enter a First Name");
@@ -131,6 +131,8 @@ public class PhoneBook {
 		}
 		contact.setState(state);
 	}
+	
+	
 	
 }
 	
