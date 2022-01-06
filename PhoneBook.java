@@ -7,11 +7,9 @@ import java.util.regex.Pattern;
 public class PhoneBook {
 	
 	static Scanner sc = new Scanner(System.in);
-	
 	Contacts contact = new Contacts(); 
 	
-	
-	public void getName() {
+	public String getName() {
 		System.out.println("Enter a First Name");
 		String name = sc.next();
 		String namePattern = "^[A-Z]{1}[a-z]{2,10}$";
@@ -23,10 +21,10 @@ public class PhoneBook {
 			name = sc.next();
 			nameMatcher = compileName.matcher(name);
 		}
-		contact.setName(name);
+		return name;
 	}
 	
-	public void getLastName() {
+	public String getLastName() {
 		System.out.println("Enter a Last Name");
 		String lastName = sc.next();
 		String lastNamePattern = "^[A-Z]{1}[a-z]{2,10}$";
@@ -38,11 +36,11 @@ public class PhoneBook {
 			lastName = sc.next();
 			lastNameMatcher = compileLastName.matcher(lastName);
 		}
-		contact.setLastName(lastName);
+		return lastName;
 	}
 	
 	
-	public void getPhone() {
+	public String getPhone() {
 		System.out.println("Enter a Phone Number");
 		String phone = sc.next();
 		String phonePattern = "^[A-Z]{1}[a-z]{2,10}$";
@@ -54,10 +52,10 @@ public class PhoneBook {
 			phone = sc.next();
 			phoneMatcher = compilePhone.matcher(phone);
 		}
-		contact.setPhone(phone);
+		return phone;
 	}
 	
-	public void getAddress() {
+	public String getAddress() {
 		System.out.println("Enter a Address");
 		String address = sc.next();
 		String addressPattern = "^[A-Z]{1}[a-z]{2,10}$";
@@ -69,10 +67,10 @@ public class PhoneBook {
 			address = sc.next();
 			addressMatcher = compileAddress.matcher(address);
 		}
-		contact.setAddress(address);
+		return address;
 	}
 	
-	public void getCity() {
+	public String getCity() {
 		System.out.println("Enter a City");
 		String city = sc.next();
 		String cityPattern = "^[A-Z]{1}[a-z]{2,10}$";
@@ -84,10 +82,10 @@ public class PhoneBook {
 			city = sc.next();
 			cityMatcher = compileCity.matcher(city);
 		}
-		contact.setCity(city);
+		return city;
 	}
 	
-	public void getZip() {
+	public String getZip() {
 		System.out.println("Enter a Zip Code");
 		String zip = sc.next();
 		String zipPattern = "^[A-Z]{1}[a-z]{2,10}$";
@@ -99,10 +97,10 @@ public class PhoneBook {
 			zip = sc.next();
 			zipMatcher = compileZip.matcher(zip);
 		}
-		contact.setZip(zip);
+		return zip;
 	}
 	
-	public void getEmail() {
+	public String getEmail() {
 		System.out.println("Enter a Email-id");
 		String email = sc.next();
 		String emailPattern = "^[A-Z]{1}[a-z]{2,10}$";
@@ -114,10 +112,10 @@ public class PhoneBook {
 			email = sc.next();
 			emailMatcher = compileEmail.matcher(email);
 		}
-		contact.setEmail(email);
+		return email;
 	}
 	
-	public void getState() {
+	public String getState() {
 		System.out.println("Enter a State");
 		String state = sc.next();
 		String statePattern = "^[A-Z]{1}[a-z]{2,10}$";
@@ -129,7 +127,7 @@ public class PhoneBook {
 			state = sc.next();
 			stateMatcher = compileState.matcher(state);
 		}
-		contact.setState(state);
+		return state;
 	}
 	
 	
