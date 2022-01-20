@@ -43,7 +43,7 @@ public class PhoneBook {
 	public String getPhone() {
 		System.out.println("Enter a Phone Number");
 		String phone = sc.next();
-		String phonePattern = "^[A-Z]{1}[a-z]{2,10}$";
+		String phonePattern = "^(\\+[0-9]{2}\\s{1})?[0-9]{10}$";
 		Pattern compilePhone = Pattern.compile(phonePattern);
 		Matcher phoneMatcher = compilePhone.matcher(phone);
 		
@@ -58,7 +58,7 @@ public class PhoneBook {
 	public String getAddress() {
 		System.out.println("Enter a Address");
 		String address = sc.next();
-		String addressPattern = "^[A-Z]{1}[a-z]{2,10}$";
+		String addressPattern = "^[A-Z,a-z,0-9]{20}$";
 		Pattern compileAddress = Pattern.compile(addressPattern);
 		Matcher addressMatcher = compileAddress.matcher(address);
 		
@@ -73,7 +73,7 @@ public class PhoneBook {
 	public String getCity() {
 		System.out.println("Enter a City");
 		String city = sc.next();
-		String cityPattern = "^[A-Z]{1}[a-z]{2,10}$";
+		String cityPattern = "^[A-Z,a-z]{5}$";
 		Pattern compileCity = Pattern.compile(cityPattern);
 		Matcher cityMatcher = compileCity.matcher(city);
 		
@@ -88,7 +88,7 @@ public class PhoneBook {
 	public String getZip() {
 		System.out.println("Enter a Zip Code");
 		String zip = sc.next();
-		String zipPattern = "^[A-Z]{1}[a-z]{2,10}$";
+		String zipPattern = "^[0-9]{6}$";
 		Pattern compileZip = Pattern.compile(zipPattern);
 		Matcher zipMatcher = compileZip.matcher(zip);
 		
@@ -103,7 +103,7 @@ public class PhoneBook {
 	public String getEmail() {
 		System.out.println("Enter a Email-id");
 		String email = sc.next();
-		String emailPattern = "^[A-Z]{1}[a-z]{2,10}$";
+		String emailPattern = "^abc(.+)[A-Za-z0-9]{3}+(@+)bl+(.+)[co]*(.[A-Za-z]{2})$\"";
 		Pattern compileEmail = Pattern.compile(emailPattern);
 		Matcher emailMatcher = compileEmail.matcher(email);
 		
@@ -118,7 +118,7 @@ public class PhoneBook {
 	public String getState() {
 		System.out.println("Enter a State");
 		String state = sc.next();
-		String statePattern = "^[A-Z]{1}[a-z]{2,10}$";
+		String statePattern = "^[A-Z,a-z]{3,15}$";
 		Pattern compileState = Pattern.compile(statePattern);
 		Matcher stateMatcher = compileState.matcher(state);
 		

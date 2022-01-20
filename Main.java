@@ -117,7 +117,7 @@ public class Main {
 					
 				case 9:
 					System.out.println("Do you wnat to exit :y/n");
-					isExit = sc.next();
+					isExit = exit();
 					break;
 					
 				default:
@@ -142,9 +142,13 @@ public class Main {
 		}
 	}
 	
-	public void exit() {
-		System.out.println("Do you want to exit :");
-		
+	public String exit() {
+		System.out.println("Do you want to exit :y/n");
+		String exit = sc.next();
+		if(exit == "y") {
+			viewAllContact();
+		} 
+			return exit();
 	}
 	
 		
